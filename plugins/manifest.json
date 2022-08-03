@@ -1,0 +1,35 @@
+{
+  "short_name": "Pagina Captação DS",
+  "name": "Pagina Captação DS",
+  "icons": [
+    {
+      "src": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/img/icons/96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/img/icons/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/img/icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/img/icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/img/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://design.fingerprint.com.br/DOACAO%20SOLUTIONS/PAG%20DOACAO/HTML/index.html",
+  "display": "standalone",
+  "background_color": "#427ca7",
+  "orientation": "portrait"
+}

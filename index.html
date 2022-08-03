@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casinha</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="plugins/Components/skins/square/grey.css">
+    <link rel="stylesheet" href="plugins/Components/components-inputs.min.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="plugins/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/Bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/Select2/select2.min.css">  
+    <link rel="stylesheet" href="plugins/Fancybox/jquery.fancybox.min.css">  
+    <link rel="stylesheet" href="plugins/style.css">
+    <![if !IE]>
+        <link rel="stylesheet" href="plugins/ie.css">
+    <![endif]>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <!-- MANIFEST -->
+    <link rel="manifest" href="plugins/manifest.json">
+
+
+    <!-- BEBAS NEUE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<form id="action" method="POST">
+    <!-- HEADER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+    <header>
+        <div class="container-fluid">
+          <div class='row' id="header">
+            <div class="col-2" id="coluna-icone">
+    
+              <a href="index.html">
+                <img id="logo" class="img-fluid" src="img/logo-principal.svg"></img>
+              </a>
+    
+            </div>
+            <div class="col-10" id="col-links">
+    
+              <a class='inicio' href="index.html">Início</a>
+              <a href="embreve/embreve.html">A Casinha</a>
+              <a href="embreve/embreve.html">Projetos</a>
+              <a href="ajuda/ajuda.html">Como ajudar</a>
+              <a href="https://casinhaacolhida.wixsite.com/casinha/doe-agora">Doar agora</a>
+              <a href="embreve/embreve.html">Nosso blog</a>
+              <a href="embreve/embreve.html">Contato</a>
+    
+            </div>
+          </div>
+        </div>
+        </div>
+      </header>
+      <div class="imagem">
+        <div class="infos">
+          <p class="doe">Doe esperança para<br> vidas LGBTI+</p>
+          <a class='link-botao' href="https://casinhaacolhida.wixsite.com/casinha/doe-agora"><button class="botao-doar">Doar
+              agora🌈</button></a>
+        </div>
+      </div>
+      </br>
+      </br>
+      </br>
+
+
+
+
+    <!-- FIM DO HEADER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    -->
+    <div class="col-lg-12">
+        <div class="container">
+
+                <!-- DADOS DO DOADOR -->
+
+                <div class="col-lg-9 pt-5 mx-auto">
+
+                    <h5 class="title">Doar agora</h5>
+                    <h6 class="mb-5 mt-4" >Colabore com a Casinha doando um <b>valor fixo por mês</b> ou fazendo uma <b>doação avulsa</b>.</h6>
+
+
+                    <h5 class="title mt-5">Escolha um valor</h5>
+
+
+
+                       <!-- VALOR DOAÇÕES -->
+       
+
+                    <div class="row" role="tablist">
+
+                        <div class="col-lg-3 col-md-3 col-6" role="tab" style="padding:2px;">                           
+                            <button type="button" id="valor_10" alt="R$ 20,00" value="R$ 20,00" class="btn_success1 valor_doacao ">
+                                <span class="size_valor">R$ 20</span>
+                            </button>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6" role="tab" style="padding:2px;">                           
+                            <button type="button" id="valor_20" alt="R$ 30,00" value="R$ 30,00" class="btn_success1 valor_doacao">
+                               <span class="size_valor">R$ 30</span>                
+
+                            </button>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6" role="tab" style="padding:2px;">                           
+                            <button type="button" id="valor_30" alt="R$ 50,00" value="R$ 50,00" class="btn_success1 valor_doacao">
+                                <span class="size_valor">R$ 50</span>
+
+                            </button>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6" role="tab" style="padding:2px;">                           
+                            <button type="button" id="valor_30" alt="R$ 100,00" value="R$ 100,00" class="btn_success1 valor_doacao">
+                                <span class="size_valor">R$ 100</span>
+
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                        <h6 class="mb-2 mt-4" >Ou escolha um valor livre:</h6>
+
+                        <div class="col-lg-5 col-md-12 col-12" role="tab" style="padding:2px;">     
+
+                 
+                               
+                                <input placeholder="R$ 00,00" value="20" type="tel" name="valor" id="valor" class="outro_valor" data-inputmask="'alias': 'currency', 'prefix': 'R$ ', 'allowMinus' : false, 'min': '0', 'digits' : '2', 'radixPoint' : ','" style="padding: 15px 10px;">
+
+
+                        </div>
+
+                   
+                  
+                <!--/ VALOR DOAÇÕES -->
+
+
+
+
+
+                    <div class="row">
+
+                        <!-- DADOS -->
+
+                        <div class="col-lg-3 valor_doar p-3 d-none">
+
+                            <center>
+                                <img src="img/coracao.svg" class="img_coracao">
+
+                                <br>
+
+
+
+                                <h4 class="pt-2">Você está doando:</h4>
+
+                                <span class="receber_valor" id="voce-esta-doando"></span>
+
+
+                            </center>
+
+                        </div>
+    
+                        <div class="col-lg-12 col-md-12 mx-auto pt-1">
+
+
+                            <h6 class="mb-2 mt-4" >Preencha suas informações:</h6>
+
+    
+                            <div class="row">
+        
+                                <div class="col-lg-12 col-md-12 col-12 form-group">
+                                    <input placeholder="Nome" type="text" name="nome" class="btn_input1">
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 form-group">
+                                    <input type="tel" placeholder="CPF/CNPJ" name="cpf" class="btn_input2 cpf_cnpj">
+                                </div>  
+                        
+                                <div class="col-lg-6  col-md-6 col-12 form-group">
+                                    <input placeholder="Data de nascimento" type="tel" name="nascimento" class="btn_input2" data-inputmask="'alias' : 'datetime', 'inputFormat' : 'dd/mm/yyyy'">
+                                </div> 
+
+                                <div class="col-lg-6 col-md-6 col-12 form-group">
+                                    <input placeholder="E-mail" type="mail" name="email" class="btn_input2">
+                                </div>
+        
+                                <div class="col-lg-6 col-md-6 col-12 form-group">
+                                    <input placeholder="Celular" type="tel" name="celular" data-inputmask="'mask': '(99) 99999-9999', 'placeholder' : '0'"  class="btn_input2 cel_with_ddd">
+                                </div>
+
+<!-- 
+                                <div class="col-lg-6 col-md-6 col-12 form-group">
+           
+                                    <select name="sexo" class="select_input simple-select2 " style="border-bottom: 2px solid #000 !important; border: 0px #fff !important; box-shadow: 0px !important; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1) !important;">
+                                        <option disabled selected>gênero</option>
+                                        <option>masculino</option>
+                                        <option>feminino</option>
+                                   </select>
+
+
+                                </div> -->
+                    
+                
+        
+                            </div>
+
+                            <h6 class="mb-2 mt-4" >Forma de pagamento</h6>
+                            
+        
+                        </div>
+
+                        
+    
+                    </div>
+
+
+                </div>          
+              
+                <!--/ DADOS DO DOADOR -->
+
+                
+             
+          
+        </div>
+    </div>
+
+
+    <!-- MODOS DE DOAÇÃO -->
+    <div class="container">
+                
+        <div class="col-lg-9 col-md-12 mx-auto mt-4">
+            <div class="row">
+
+                <ul class="nav nav-pills justify-content-center" role="tablist">
+
+                    <!-- CREDITO -->
+                    <li class="nav-item col-lg-3 col-md-3 col-6 p-1">
+                        <a id="credito" class="nav-link btn_pagamentos" data-toggle="tab" href="#home" role="tab">
+                            <i class=""></i> Crédito
+                        </a>
+                    </li>
+
+                    <!-- DEBITO -->
+                    <li class="nav-item col-lg-3 col-md-3 col-6 p-1">
+                        <a id="debito" class="nav-link btn_pagamentos" data-toggle="tab" href="#home" role="tab">
+                            <i class=""></i> Débito
+                        </a>
+                    </li>
+
+                    <!-- DEBITO EM CONTA -->
+                    <li class="nav-item col-lg-3 col-md-3 col-6 p-1">
+                        <a id="conta_bancaria" class="nav-link btn_pagamentos" data-toggle="tab" href="#deb_conta" role="tab">
+                            Débito em conta
+                        </a>
+                    </li>
+
+                    <!-- BOLETO -->
+                    <li class="nav-item col-lg-3 col-md-3 col-6 p-1">
+                        <a id="boleto" class="nav-link btn_pagamentos" data-toggle="tab" href="#messages" role="tab">
+                            <i class=""></i> Boleto
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>          
+
+    </div>
+
+    <!------------------------------------------------------->
+
+
+    <!--/ HEADER -->
+    <div class="container  tab-pane" style="padding: 0;">
+        <div class="col-lg-10 col-md-12 mx-auto" style="padding: 0;">
+        <!-- MEIOS DE PAGAMENTO -->
+            <div class="col-md-12" id="pagamentos" style="padding: 0; margin-top: 20px;">
+                <div class="card">           
+                    <!-- PAGAMENTOS -->
+                    <div class="card-body">
+                        <div class="tab-content text-center">
+
+                            <!--/ DADOS DO DOADOR -->
+                            <div class="tab-pane" id="home" role="tabpanel">                            
+                                <div class="form-container">
+                                    <center>
+                                        <!-- DADOS DO CARTÃO -->
+                                        <div class="col-lg-11 col-md-12 mx-auto" >
+                                            <div class="row dados_pagamento">  
+
+                                                <div class="col-md-5 form-group">
+                                                    <p class="label_card_info">NOME IMPRESSO NO CARTÃO</p>
+                                                    <input placeholder="nome impresso no cartão" type="text" name="nome_impresso" class="btn_input_pag" >
+                                                </div>    
+
+                                                <div class="col-md-4 col-8 form-group">
+                                                    <p class="label_card_info">NÚMERO DO CARTÃO</p>
+                                                    <input placeholder="número do cartão" type="tel" name="cartao" class="btn_input_pag" data-inputmask="'mask' : '9999   9999   9999   9999[   999]', 'placeholder' : '0'">
+                                                    <p class="d-block d-sm-none"></p>
+                                                </div>  
+
+                                                <div class="col-md-3 col-4 form-group">
+                                                    <p class="label_card_info">&nbsp;</p>
+                                                    <select name="bandeira" class="brand-select2"></select>
+                                                </div>     
+
+                                                <div class="col-lg-5 col-md-5 col-12 form-group">
+                                                    <p class="label_card_info">CPF/CNPJ TITULAR</p>
+                                                    <input type="tel" placeholder="cpf/cnpj titular" name="cpf_portador" class="btn_input_pag cpf_cnpj">
+                                                </div>   
+
+                                                <div class="col-lg-4 col-md-4 col-7 form-group">
+                                                    <p class="label_card_info">VALIDADE</p>
+                                                    <input placeholder="validade" type="tel" name="validade" class="btn_input_pag" data-inputmask="'alias' : 'datetime', 'inputFormat' : 'mm / yyyy', 'placeholder' : '0'">
+                                                </div> 
+
+                                                <div class="col-lg-3 col-md-3 col-5 form-group">
+                                                    <p class="label_card_info">CVC  &nbsp; <i class="fa fa-info-circle fa-lg text-weight-bold" aria-hidden="true" data-toggle="tooltip" data-placement="top" data-html="true" title="<img src='img/cvv.png' />" ></i></p>
+                                                    <input placeholder="cvc" type="tel" name="codigo" class="btn_input_pag" data-inputmask="'mask' : '999[9]', 'placeholder' : '0'">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ DADOS CARTÃO -->
+                                    </center>
+                                </div>     
+                                
+                          
+                                <div class="col-lg-11 mx-auto text-left row no-margin p-4" style="background-color: #f9f9f9; border-radius: 5px; padding: 10px 40px 10px 40px; margin-top: 16px;" id="bandeiras_aceitas">
+                                    <div class="col-lg-12 pt-2 mx-auto alert-info">
+                                        <p><b>Bandeiras e bancos aceitos:</b>
+                                            <br>• <b>MasterCard:</b> Bradesco, Banco do Brasil, Santander, CitiBank, BRB, Caixa, BancooB
+                                            <br>• <b>VISA:</b> Bradesco, Banco do Brasil, Santander, CitiBank
+                                                
+                                            <br><br>Verificar se o popup não foi bloqueado quando clicar em doar. Você será redirecionado para finalizar a doação!</p>
+                                    </div>
+                                </div>
+                                
+
+
+                            </div>
+                            <div class="tab-pane" id="messages" role="tabpanel">
+                                <!-- BOLETO -->
+                                <div class="col-md-12 mx-auto">
+                                    <div class="row">
+                                        <!-- DADOS DA INDICAÇÃO -->
+                                        <div class="col-lg-11 col-md-12 mx-auto">
+                                            <div class="row form-group  dados_pagamento">
+                                                <div class="col-md-3 col-8 form-group">
+                                                    <p class="label_card_info">CEP <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="new" style="font-size: 10px; color: #000;">(Não sei<span class="none_cep"> meu CEP</span>)</a></p>
+                                                    <input placeholder="00000-000" type="tel" name="cep" class="btn_input_pag cep" data-inputmask="'mask' : '99999-999'">
+                                                </div>
+                                                <div class="col-md-2 col-4 form-group">
+                                                    <p class="label_card_info">UF</p>
+                                                    <select name="uf" class="select_input filter-select2">
+                                                        <option>AC</option>
+                                                        <option>AL</option>
+                                                        <option>AP</option>
+                                                        <option>AM</option>
+                                                        <option>BA</option>
+                                                        <option>CE</option>
+                                                        <option>DF</option>
+                                                        <option>ES</option>
+                                                        <option>GO</option>
+                                                        <option>MA</option>
+                                                        <option>MT</option>
+                                                        <option>MS</option>
+                                                        <option>MG</option>
+                                                        <option>PA</option>
+                                                        <option>PB</option>
+                                                        <option>PR</option>
+                                                        <option>PE</option>
+                                                        <option>PI</option>
+                                                        <option>RJ</option>
+                                                        <option>RN</option>
+                                                        <option>RS</option>
+                                                        <option>RO</option>
+                                                        <option>RR</option>
+                                                        <option>SC</option>
+                                                        <option selected>SP</option>
+                                                        <option>SE</option>
+                                                        <option>TO</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-7 col-md-7 col-12 form-group">
+                                                    <p class="label_card_info">CIDADE</p>
+                                                    <input placeholder="CIDADE" type="text" name="cidade" class="btn_input_pag">
+                                                </div>
+
+                                                <div class="col-md-10 col-12 form-group">
+                                                    <p class="label_card_info">ENDEREÇO</p>
+                                                    <input placeholder="ENDEREÇO COMPLETO" type="text" name="endereco" class="btn_input_pag">
+                                                </div>  
+                                                
+                                                <div class="col-md-2 col-4 form-group">
+                                                    <p class="label_card_info">Nº</p>
+                                                    <input placeholder="000" type="number" name="numero" class="btn_input_pag">
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-8 form-group">
+                                                    <p class="label_card_info">COMPLEMENTO</p>
+                                                    <input placeholder="Apt 00 - Bloco 00" type="text" name="complemento" class="btn_input_pag">
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-6 form-group">
+                                                    <p class="label_card_info">BAIRRO</p>
+                                                    <input placeholder="BAIRRO" type="text" name="bairro" class="btn_input_pag">
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-4 col-6 form-group">
+                                                    <p class="label_card_info">VENCIMENTO</p>
+                                                    <input placeholder="00/00/0000" type="tel" name="vencimento" class="btn_input_pag" data-inputmask="'alias' : 'datetime', 'inputFormat' : 'dd/mm/yyyy'">
+                                                </div>  
+
+                                            </div>
+                             
+                               
+                                        </div>
+                                        <!-- /DADOS DA INDICAÇÃO -->
+                                    </div>
+                                    <!-- / BOLETO -->
+                                </div>
+                            </div>
+                            <!-- DEBITO EM CONTA -->
+                            <div class="tab-pane" id="deb_conta" role="tabpanel">
+                                <!-- BOLETO -->
+                                <div class="col-md-12 mx-auto">
+                                    <div class="row">
+                                        <!-- DADOS DA INDICAÇÃO -->
+                                        <div class="col-lg-11 col-md-12 mx-auto" >
+                                            <div class="row dados_pagamento">
+                                                <div class="col-sm-5 form-group">
+                                                    <p class="label_card_info">CPF/CNPJ TITULAR</p>
+                                                    <input type="tel" placeholder="000.000.000-00" name="cpf_conta" class="btn_input_pag  cpf_cnpj">
+                                                </div>
+                                                <div class="col-sm-7 form-group">
+                                                    <p class="label_card_info">NOME TITULAR</p>
+                                                    <input placeholder="Nome do titular da conta" type="text" name="nome_conta" class="btn_input_pag">
+                                                </div>
+                                        
+                                                <div class="col-lg-2 col-md-2 col-5 form-group">
+                                                    <p class="label_card_info">AGÊNCIA</p>
+                                                    <input placeholder="0000" type="tel" name="agencia" class="btn_input_pag" data-inputmask="'mask' : '9999[9999]', 'placeholder': ''">
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-5 form-group">
+                                                    <p class="label_card_info">CONTA</p>
+                                                    <input placeholder="00000" type="tel" name="conta" class="btn_input_pag" data-inputmask="'mask' : '99999[************]', 'placeholder': ''">
+                                                </div>
+                                                <div id="conta-digito" class="col-lg-1 col-md-1 col-2 form-group">
+                                                    <p class="label_card_info">&nbsp;</p>
+                                                    <input placeholder="0" type="tel" name="digito" class="btn_input_pag" data-inputmask="'mask' : '9[*]', 'placeholder': ''">
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-6 form-group">
+                                                    <p class="label_card_info">DIA DO DÉBITO</p>
+                                                    <select name="debito" class="select_input filter-select2 select_pag">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
+                                                        <option>21</option>
+                                                        <option>22</option>
+                                                        <option>23</option>
+                                                        <option>24</option>
+                                                        <option>25</option>
+                                                        <option>26</option>
+                                                        <option>27</option>
+                                                        <option>28</option>
+                                                        <option>29</option>
+                                                        <option>30</option>
+                                                        <option>31</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-6">
+                                                    <p class="label_card_info">BANCO &nbsp; <i class="fa fa-info-circle fa-lg text-weight-bold" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Débito em conta autorizado somente para clientes Itaú."></i></p>
+                                                    <select name="banco" class="bank-select2 input_doador">
+                                                        <option value="341" selected>itau.svg</option>              
+                                                    </select>
+                                                </div> 
+                                            </div>
+                                            <div class="col-lg-12" style="padding: 0;">
+                                                <br>
+                                                <h6 class="alert alert-info">
+                                                    Prezado doador, o prazo para autorização do primeiro débito em conta são de 10 dias. Caso queira realizar sua doação o quanto antes, some a data de hoje ao prazo (+10) e informe no campo "dia do débito".
+                                                    <br><br>
+                                                    Você receberá um SMS solicitando a autorização do débito em conta, esta operação deverá ser realizada somente uma vez. </h6>
+                                            </div>
+                                        </div>  
+                                        <!-- /DADOS DA INDICAÇÃO -->
+                                    </div>
+                                    <!-- / BOLETO -->
+                                </div>
+                            </div>
+                            <!-- / DEBITO EM CONTA -->
+                        </div><!-- / CARD-BODY -->
+                    </div><!-- / CARD --> 
+
+
+                    <!-- PERIODO -->
+
+                    <div class="col-lg-11 mx-auto">
+                        
+                        <div class="row mt-3" id="periodicidade">
+
+                            <div class="col-lg-6 col-md-6 col-12 mx-auto">     
+                                <button id="recorrente" name="periodicidade" type="button" class="modo_doacao selected p-0">
+                                    <label for="recorrencia" class='w-100 m-0 h-100 d-flex justify-content-center align-items-center'>
+                                    <input type="radio" id="recorrencia" name="iCheck" value="mensal" checked> &nbsp;
+                                    Doar mensalmente
+                                    
+                                    </label>
+                                </button> 
+                            </div>
+                    
+                            <div class="col-lg-6 col-md-6 col-12 mx-auto">
+                                <button id="avulso" name="periodicidade" type="button" class="modo_doacao  p-0">
+                                    <label for="recorrenciaa" class='w-100 m-0 h-100 d-flex justify-content-center align-items-center'>
+                                        <input type="radio" id="recorrenciaa" name="iCheck" value="única"> &nbsp;
+                                    
+                                        Doar só hoje 
+                                   
+                                    </label>
+                                </button> 
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- / PERIODO -->
+
+
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto" style="padding: 0;">
+                            <div class="row no-margin">
+
+                                <div class="col-12"><br></div>
+
+                                <!-- TERMOS DE CONTRATO -->
+
+                                <div id="termos" class="col-lg-112 col-md-12 mx-auto" style="background-color: #f9f9f9; border-radius: 5px; padding: 10px 40px 10px 40px; margin-top: 16px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="aceites_termos">
+                                                <div class="row">
+
+                                                    <!-- Termo 1 -->
+                                                    <div class="col-lg-1 col-md-1 col-2">
+                                                        <input type="checkbox" name="termos"> 
+                                                    </div>
+                                                    <div class="col-lg-11 col-md-11 col-10">
+                                                        <span style="padding: 10px 0;">Autorizo o Casinha a efetivar minhas doações junto à instituição financeira, conforme as opções por mim assinaladas acima.</span>
+                                                    </div>                                       
+
+                                                    
+                                                    <!-- Termo 2 -->
+                                                    <div class="col-lg-1 col-md-1 col-2">
+                                                        <input type="checkbox" name="termos"> 
+                                                    </div>
+                                                    <div class="col-lg-11 col-md-11 col-10">
+                                                        <span style="padding: 10px 0;">Concordo em receber notícias e atualizações do Casinha</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--/ TERMOS DE CONTRATO -->
+
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="row justify-content-center">                        
+                        <div class="col-auto">
+                            <br>
+                            <div class="g-recaptcha" data-sitekey="6LcPAuIaAAAAAKBUdXhYF9hrwqNcAXm4qgODYUuT"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-cadastrar mx-auto">
+                        <spam style="padding-bottom: 20px !important;">Doar agora</spam> &nbsp; <img src="img/arco.png" alt="20px" style="padding-bottom: 10px !important;"/>
+                    </button>
+                </div>
+                <!--/ MEIOS DE PAGAMENTO -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+
+
+
+
+<!-- RODAPE -->
+
+
+<div class="col-lg-12 p-0 mt-3 mb-3">
+
+    <div class="container">
+
+        <div class="col-lg-9 col-md-12 col-12 mx-auto">
+
+            <div class="row">
+
+                <div class="col-lg-7 col-md-5">
+                    <a href="https://www.doacaosolutions.com.br/" target="_new" style="color: #000 !important;"><img src="img/seguro.svg" alt="SITE SEGURO" title="SITE SEGURO" width="100%" class="pr-5 pl-5 pt-3"></a>
+
+                </div>
+
+                <div class="col-lg-5 col-md-7">
+
+                    <h6 class="text_rodape pt-3">Os dados pessoais fornecidos serão tratados em conformidade com a Lei Geral de Proteção de Dados Pessoais - LGPD (Lei nº 13.709/18).</h6>
+                    <br>
+
+                    <h6 class="text_rodape">Site seguro com certificado PCi DSS Compliant.</h6>
+                    <br><br>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="iframe-boleto d-none">
+    <span class="iframe-fechar">X</span>
+</div>
+
+
+<!--INICIO FOOTER CASINHA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+<!--
+<footer>
+    <div class='footer'>
+      <div class="links-pagina">
+        <div class="icon-footer">
+          <img id="logo-footer" src="img/logo-footer.svg" style="width: 30%;"></img>
+        </div>
+        <div class="os-links">
+          <p><a href="index.html">Início</a></p>
+          <p><a href="embreve/embreve.html">A Casinha</a></p>
+          <p><a href="embreve/embreve.html">Projetos</a></p>
+          <p><a href="ajuda/ajuda.html">Como ajudar</a></p>
+          <p><a href="https://casinhaacolhida.wixsite.com/casinha/doe-agora">Doar agora</a></p>
+          <p><a href="embreve/embreve.html">Nosso blog</a></p>
+          <p><a href="embreve/embreve.html">Contato</a></p>
+          <p><a href="embreve/embreve.html">Política de Privacidade</a></p>
+        </div>
+      </div>
+      <div class="contatos">
+        <p class="contatos-title">Nossos contatos</p>
+        <p><a href="mailto:contato@casinha.ong">contato@casinha.ong</a></p>
+        <p><a href="mailto:saude@casinha.ong">saude@casinha.ong</a></p>
+        <p><a href="mailto:empregabilidade@casinha.ong">empregabilidade@casinha.ong</a></p>
+        <p><a href="mailto:gestao@casinha.ong">gestao@casinha.ong</a></p>
+        <p><a href="mailto:educacional@casinha.ong">educacional@casinha.ong</a></p>
+        <p><a href="mailto:cultural@casinha.ong">cultural@casinha.ong</a></p>
+        <div class="icons">
+          <a href="https://www.instagram.com/casinhaacolhida/" target="_blank"><img id="icone-inst"
+              src="img/instagram-icon.svg"></a>
+          <a href="https://www.linkedin.com/company/casinhaacolhida/" target="_blank"><img id="icone-lk"
+              src="img/linkedin-icon.svg"></a>
+          <a href="https://www.facebook.com/casinhaacolhida" target="_blank"><img id="icone-fb"
+              src="img/facebook-icon.svg"></a>
+        </div>
+      </div>
+      <div class="fale-conosco">
+        <form action="https://formsubmit.co/contato@casinha.ong" method="POST">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/email/email.html">
+          <input type="hidden" name="_subject" value="Nova mensagem!">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <p class="fale-title">Fale com a gente</p>
+          <p><label for='nome'><input type="text" name="nome" id="nome" placeholder="Seu nome" required></label></p>
+          <p><label for='email'><input type="email" name="email" id="email" placeholder="Seu email" required></label>
+          </p>
+          <p><label for='assunto'><input type="text" name="assunto" id="assunto" placeholder="Assunto"></label></p>
+          <p><textarea rows=8 cols=35 placeholder='Mensagem'></textarea></p>
+          <p><input type="submit" value="Enviar" class="enviar-botao"></p>
+        </form>
+      </div>
+    </div>
+    <div class="devs">
+      <p><a id="devs" href='#'>Vem conhecer quem faz o site da Casinha</a></p>
+    </div>
+    <div class="copyright">
+      <p>© 2022 ONG Casinha Acolhida</p>
+    </div>
+  </footer>
+  -->
+
+
+
+
+
+
+<!--FINAL DO FOOTER CASINHA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+<script src="plugins/JQuery/jquery.min.js"></script>
+<script src="plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/SweetAlert/sweet_alert.min.js"></script>
+<script src="plugins/Inputmask5/jquery.inputmask.min.js"></script>
+<script src="plugins/ICheck/icheck.min.js"></script>
+<script src="plugins/Validation/jquery.validate.min.js"></script>
+<script src="plugins/Validation/additional-methods.min.js"></script>
+<script src="plugins/Select2/select2.min.js"></script> 
+<script src="plugins/Fancybox/jquery.fancybox.min.js"></script> 
+<script src="plugins/script.js"></script>
+
+<script>
+    $('#recorrencia').on('ifChecked',function(event){
+        $('#recorrente').addClass('selected')
+    })
+    $('#recorrencia').on('ifUnchecked',function(event){
+        $('#recorrente').removeClass('selected')
+    })
+    $('#recorrenciaa').on('ifChecked',function(event){
+        $('#avulso').addClass('selected')
+    })
+    $('#recorrenciaa').on('ifUnchecked',function(event){
+        $('#avulso').removeClass('selected')
+    })
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
